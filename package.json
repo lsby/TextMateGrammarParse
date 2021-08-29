@@ -1,6 +1,6 @@
 {
     "name": "@lsby/textmate_grammar_parse",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "",
     "main": "dist/index.js",
     "scripts": {
@@ -24,5 +24,17 @@
         "@types/node": "^16.7.6",
         "vscode-oniguruma": "^1.5.1",
         "vscode-textmate": "^5.4.0"
-    }
+    },
+    "directories": {
+        "test": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lsby/TextMateGrammarParse.git"
+    },
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/lsby/TextMateGrammarParse/issues"
+    },
+    "homepage": "https://github.com/lsby/TextMateGrammarParse#readme"
 }

@@ -1,9 +1,10 @@
 import * as oniguruma from 'vscode-oniguruma'
 import * as vsctm from 'vscode-textmate'
 import * as fs from 'fs'
+import * as path from 'path'
 
-export default function (onigbindPath: string) {
-    var onig_bin = fs.readFileSync(onigbindPath).buffer
+export default function () {
+    var onig_bin = fs.readFileSync(path.join(__dirname, '../bin/onig.wasm')).buffer
     var vscodeOnigurumaLib = oniguruma.loadWASM(onig_bin).then(() => {
         return {
             createOnigScanner(patterns: string[]) { return new oniguruma.OnigScanner(patterns) },
