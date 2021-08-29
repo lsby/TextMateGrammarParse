@@ -1,0 +1,28 @@
+{
+    "name": "@lsby/textmate_grammar_parse",
+    "version": "0.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "scripts": {
+        "dev": "npm run watch",
+        "build": "tsc",
+        "watch": "tsc -w",
+        "test": "ts-mocha --bail test/**/*.test.ts",
+        "clean_node_modules": "rm -rf ./node_modules",
+        "clean_dist": "rm -rf ./dist",
+        "clean": "npm run clean_node_modules && npm run clean_dist",
+        "pub": "npm publish --access=public"
+    },
+    "author": "",
+    "devDependencies": {
+        "@types/mocha": "^8.2.2",
+        "mocha": "^9.1.1",
+        "ts-mocha": "^8.0.0",
+        "typescript": "^4.2.4"
+    },
+    "dependencies": {
+        "@types/node": "^16.7.6",
+        "vscode-oniguruma": "^1.5.1",
+        "vscode-textmate": "^5.4.0"
+    }
+}
