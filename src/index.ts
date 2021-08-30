@@ -37,9 +37,9 @@ export default function () {
             for (let i = 0; i < codeArr.length; i++) {
                 var line = codeArr[i]
                 var lineTokens = grammar.tokenizeLine(line, ruleStack)
-                r.push(lineTokens.tokens.map((a, i) => ({
+                r.push(lineTokens.tokens.map((a, k) => ({
                     ...a,
-                    token: line.substring(lineTokens.tokens[i].startIndex, lineTokens.tokens[i].endIndex),
+                    token: line.substring(lineTokens.tokens[k].startIndex, lineTokens.tokens[k].endIndex),
                     row: i
                 })))
                 ruleStack = lineTokens.ruleStack
