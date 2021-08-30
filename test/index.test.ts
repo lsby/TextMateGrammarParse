@@ -1,11 +1,10 @@
-import * as path from 'path'
 import lib from "../dist/"
 import js from './js'
 
-var 检测器 = lib()
+var 检测器 = lib()('source.js', js)
 
 it('解析', async function () {
-    var 返回 = await 检测器('source.js', js, `
+    var 返回 = await 检测器(`
         function sayHello(name) {
             return "Hello, " + name
         }
