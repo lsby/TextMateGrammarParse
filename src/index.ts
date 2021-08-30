@@ -29,7 +29,7 @@ export default function () {
                 scopes: string[]
             }[][] = []
 
-            var codeArr = code.replace(/\r/g, '\n').split('\n')
+            var codeArr = code.replace(/\r/g, '').split('\n')
             var grammar = await registry.loadGrammar(scopeName)
             if (grammar == null) { throw '解析失败' }
             let ruleStack = vsctm.INITIAL
