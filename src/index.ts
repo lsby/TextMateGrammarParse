@@ -26,6 +26,7 @@ export default function () {
                 token: string
                 startIndex: number
                 endIndex: number
+                row: number,
                 scopes: string[]
             }[][] = []
 
@@ -38,7 +39,8 @@ export default function () {
                 var lineTokens = grammar.tokenizeLine(line, ruleStack)
                 r.push(lineTokens.tokens.map((a, i) => ({
                     ...a,
-                    token: line.substring(lineTokens.tokens[i].startIndex, lineTokens.tokens[i].endIndex)
+                    token: line.substring(lineTokens.tokens[i].startIndex, lineTokens.tokens[i].endIndex),
+                    row: i
                 })))
                 ruleStack = lineTokens.ruleStack
             }
